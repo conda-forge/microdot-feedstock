@@ -1,13 +1,13 @@
 {% set name = "microdot" %}
-{% set version = "2.0.6" %}
+{% set version = "2.0.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/microdot-{{ version }}.tar.gz
-  sha256: 20862bcb4b0b8468a4f6bc890efb17c5c7255cc66424c0815c852df53092ef98
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/microdot-{{ version }}.tar.gz
+  sha256: 390ee84a85c6cd0637e545eb3c041c8b66aeba4216bad535ed59ea201d53ff05
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=61.2
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -29,6 +29,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/miguelgrinberg/microdot
