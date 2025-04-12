@@ -1,5 +1,5 @@
 {% set name = "microdot" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/microdot-{{ version }}.tar.gz
-  sha256: a6af34a8a9de1bbb217264102af0cb639c2ecf5c7a17eb204194227bdbcd2bf8
+  sha256: f6bcb27f3dd9d9ce23cfcf06f5387d39cd77f42779d1605aea6ba295facf114d
 
 build:
   noarch: python
