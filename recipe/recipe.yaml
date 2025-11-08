@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: microdot
-  version: "2.3.5"
+  version: "2.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/microdot-${{ version }}.tar.gz
-  sha256: 0546b510acddd3fdced7fba3871114b898dddcdc468fbf76039bee19294927ca
+  sha256: 202efa3c365887c7967ab01c3b66848c98785ec1917cb970fcaa56a55ba79817
 
 build:
   number: 0
